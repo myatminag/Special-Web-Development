@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <audio src="./Audio/bensound-ukulele.mp3" controls></audio> -->
+
+    <!-- <input type="file" id="upload" multiple>
+    <ul id="list"></ul> -->
+
+    <form action="" id="test">
+        <input type="text" name="Yourname" >
+        <br>
+        <input type="text" name="Password" >
+        <br>
+        <button>Register</button>
+    </form>
+
+    <script>
+
+        //audio api
+        // let audio = new Audio('./Audio/bensound-ukulele.mp3');
+
+        //file list
+        // document.getElementById("upload").addEventListener("change",function () {
+        //     let upload = this.files;
+        //     console.log(upload);
+
+        //     for (x of upload) {
+        //         console.log(x);
+        //         document.getElementById("list").innerHTML += `<li>${x.name}</li>`
+        //     }
+        // });
+
+        //form api
+        document.getElementById("test").addEventListener("submit",function (e) {
+            e.preventDefault();
+            let x = new FormData(this);
+
+            x.append("status","false")
+            x.append("job","web developer");
+
+            for (let pair of x.entries()) {
+                console.log(pair[0]+ ', '+ pair[1]);
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+$primaryColor: blue;
+
+@mixin aa($x) {
+    border: 2px solid black;
+    margin: 2rem $x;
+}
+
+.one {
+    @include aa(1rem);
+    background-color: $primaryColor;
+    height: 100px;
+}
+
+.two {
+
+    h1 {
+        @include aa(1rem);
+        color: $primaryColor;
+    }
+
+    p {
+        color: $primaryColor;
+    }
+}

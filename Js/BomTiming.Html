@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h4>Timing Bomb</h4>
+    <ul>
+        <li>setTimeout(function,milliseconds)</li>
+        <li>clearTimeout(function)</li>
+    </ul>
+    <h4>Timing</h4>
+    <ul>
+        <li>setInterval(function,milliseconds)</li>
+        <li>clearTimeout(function)</li>
+    </ul>
+
+    <script>
+
+        let test = function () {
+            console.log("this is test "+Math.random());
+        }
+        
+        let run = setTimeout(test,1000);
+
+    </script>
+    
+</body>
+</html>

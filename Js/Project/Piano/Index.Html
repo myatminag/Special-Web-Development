@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            font-style: italic;
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 1em;
+        }
+
+        .hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(Images/wood.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .hero-top {
+            position: relative;
+            top: 150px;
+        }
+
+        .hero-head {
+            width: 50%;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-head button {
+            font-size: 1em;
+            width: 50px;
+            height: 25px
+        }
+
+        .hero-head input {
+            width: 300px;
+            height: 25px
+        }
+
+        .hero-btn {
+            display: flex;
+            width: 50%;
+            margin: auto;
+            justify-content: center;
+            align-items: center
+        }
+
+        .hero-btn button {
+            font-size: 1.5em;
+            width: 5em;
+            height: 10em;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .bud {
+            background: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Randy's Piano</h1>
+    
+    <div class="hero">
+        <header class="hero-top">
+        <div class="hero-head">
+            <input type="text" id="chords">
+            <button onclick="saveChord()">Save</button>
+        
+        </div>
+
+        <div class="hero-btn">
+            <button onclick="run('C4')">C4</button>
+            <button class="bud" onclick="run('D4')">D4</button>
+            <button onclick="run('E4')">E4</button>
+            <button class="bud" onclick="run('F4')">F4</button>
+            <button onclick="run('G4')">G4</button>
+            <button class="bud" onclick="run('A4')">A4</button>
+            <button onclick="run('B4')">B4</button>
+            <button class="bud" onclick="run('C5')">C5</button>
+        </div>
+        </header>
+    </div>
+
+    <ul id="list"></ul>
+
+    <script>
+
+        let chords = document.getElementById("chords");
+        let pianoMemory = [];
+        let list = document.getElementById('list')
+
+        function run(x) {
+            const a = new Audio(`Audio/${x}.mp3`);
+            a.play();
+            chords.value += x + ',';
+            console.log(`You play ${x} key`)
+        }
+
+        function saveChord() {
+            let input = chords.value;
+            pianoMemory.push(input);
+            console.log(`${input} is save in memory`);
+            chords.value = '';
+            list.innerHTML= '';
+            pianoMemory.map(function(el,index) {
+                list.innerHTML += `<li>${el}<button onclick="rePlay(${index})">Replay</button></li>`
+            })
+        }
+
+        let m =["C4","E4","D4","F4"];
+        function runMemory(arr,delay = 500) {
+            let x = Number(delay);
+            arr.map(function(el,index) {
+                setTimeout(run,x,el);
+                x += delay;
+            });
+        }
+
+        function rePlay(x) {
+            let current = pianoMemory[x].split(',');
+            // let tempo = prompt('input tempo in ms');
+            current.pop();
+            runMemory(current);
+        }
+
+        document.addEventListener('keyup', (e) => {
+            console.log(e.keyCode);
+            let current = e.keyCode;
+            if (current == 65) {
+                run('C4')
+            } else if (current == 83) {
+                run('D4');
+            } else if (current == 68) {
+                run('E4')
+            } else if (current == 70) {
+                run('F4')
+            } else if (current == 74) {
+                run('G4')
+            } else if (current == 75) {
+                run('A4')
+            } else if (current == 76) {
+                run('B4')
+            } else if (current == 186) {
+                run('C5')
+            }
+        }) 
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <style>
+
+    h1::before {
+        content: "Hello!";
+        color: blue;
+    }
+
+    h1::after {
+        content: "I am .....";
+        color: brown;
+    }
+
+    .box {
+        width: 300px;
+        height: 100px;
+        background: skyblue;
+        border-radius: 15px;
+        position: absolute;
+    }
+
+    .box-tail {
+        /* width: 50px;
+        height: 100px; */
+        background-color: skyblue;
+        /* margin-top: 10px; */
+        border: 20px solid white;
+        border-top-color: skyblue;
+        display: inline-block;
+        margin-left: 200px;
+    }
+
+    .box::after{
+        content: "";
+        /* width: 50px; */
+        /* height: 50px; */
+        /* background: black; */
+        position: absolute;
+        bottom: -60px;
+        left: 200px;
+        border: 30px solid white;
+        display: inline-block;
+        border-top-color: skyblue;
+    }
+
+  </style>
+</head>
+<body>
+
+    <h1>Nice To Meet You</h1>
+
+    <div class="box"></div>
+    <!-- <div class="box-tail"></div> -->
+
+</body>
+</html>

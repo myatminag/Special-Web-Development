@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div {
+            display: inline-block;
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+            border: 2px solid skyblue;
+        }
+
+        .square-rounded {
+            border-radius: 5px;
+        }
+
+        rect {
+            width: 150px;
+            height: 50px;
+            border: 2px solid skyblue;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border: 2px solid skyblue;
+            border-radius: 50%;
+            background: rgb(87, 87, 231);
+        }
+
+        .img-circle {
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .bg-img {
+            background: url("Photos/1bc9a3eb-bcc1-4e19-962b-6287d159a17a-1920-1080.jpg");
+            background-size: 50px;
+        }
+
+        .triangle {
+            border: 50px solid white;
+            border-bottom-color: lightgreen;
+        }
+
+        .triangle-2 {
+            border: 50px solid white;
+            border-bottom-color: lightgreen;
+            border-right-color: lightgreen;
+        }
+        .envelope {
+            border: 50px solid lightcoral;
+            border-top-color: lightgreen;
+            border-bottom-width: 10px;
+            border-radius: 5px;
+        }
+
+        .arrowshape {
+            width: 300px;
+            height: 100px;
+            background: skyblue;
+            position: relative;
+        }
+
+        .arrowshape::before {
+            content: "";
+            position: absolute;
+            border: 50px solid skyblue;
+            border-left-color: white;
+        }
+
+        .arrowshape::after {
+            content: "";
+            position: absolute;
+            border: 50px solid white;
+            border-left-color: skyblue;
+            left: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>HTML, Css Shapes</h1>
+
+    <div class="square"></div>
+    <div class="square square-rounded"></div>
+    <div class="rect"></div>
+
+    <hr>
+
+    <div class="circle"></div>
+    <img class="img-circle" src="./Photos/wallpapersden.com_reflection-of-cloudy-sunset-over-beach_2048x1366.jpg" ></img>
+
+    <div class="circle bg-img"></div>
+
+    <hr>
+
+    <div class="triangle"></div>
+    <div class="triangle-2"></div>
+    <div class="envelope"></div>
+
+    <hr>
+
+    <div class="arrowshape"></div>
+    
+</body>
+</html>

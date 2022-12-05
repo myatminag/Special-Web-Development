@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p" title="para">This is p tag</p>
+    
+    <input type="text" id="input">
+
+    <select name="" id="select">
+        <option value="mm">mm</option>
+        <option value="uk">uk</option>
+        <option value="us">us</option>
+    </select>
+
+    <button class="btn">Click</button>
+    
+    <script src="Js/jquery.js"></script>
+
+    <script>
+
+        $(".btn").click(function () {
+            let data = $("#p").attr("title");
+                console.log(data);
+        });
+
+    </script>
+    
+</body>
+</html>

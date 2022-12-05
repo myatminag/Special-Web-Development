@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .bg-blue {
+            background: #22d1ee;
+        }
+
+        .bg-green {
+            background-color: #17b978;
+        }
+
+        .one {
+            height: 50vh;
+            background-color: #f0f0f0;
+            display: flex;
+        }
+
+        .part {
+            flex-grow: 1;
+        }
+
+        .part.right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two {
+            width: 990px;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: -100px;
+        }
+
+        .two-part {
+            text-align: center;
+            width: 300px;
+            padding: 30px 15px;
+            background-color: #fff;
+            box-shadow: 0 0 25px #00000020;
+        }
+
+        .third {
+            width: 990px;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .third-part {
+            width: 500px;
+            text-align: center;
+        }
+
+        .four{
+            height: 100vh;
+            display: flex ;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5eded;
+        }
+
+        .four-img {
+            width: 450px;
+        }
+
+        .four-part {
+            width: 450px;
+            padding: 0 50px;
+        }
+
+        .five {
+            background-color: #fafaf6;
+            flex-direction: row-reverse;
+        }
+
+        /* .five-part {
+            text-align: right;
+        } */
+
+        @media screen and (max-width:480px) {
+            .one, .two, .third, .fout, .five {
+                flex-direction: column;
+            }
+
+            section,div {
+                max-width: 100% !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="one">
+        <div class="part left bg-blue"></div>
+        <div class="part right bg-green">
+            <div class="" style="width: 300px;">
+                <h1>This is Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi a quis omnis, necessitatibus dolor commodi, ipsum nemo modi culpa debitis, vitae quaerat laboriosam sint vero. Dolore officia veritatis iste!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="two">
+        <div class="two-part">
+            <h1>This is one</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus officiis blanditiis laboriosam repudiandae iste odio, alias porro asperiores fugiat nobis aspernatur exercitationem animi corrupti dolores. Adipisci iure dicta expedita sit?
+            </p>
+        </div>
+        <div class="two-part">
+            <h1>This is two</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nesciunt aperiam repellat molestias rem nobis eos, inventore, blanditiis ab laudantium reiciendis? Possimus id, atque ad suscipit nemo provident ratione corrupti?
+            </p>
+        </div>
+        <div class="two-part">
+            <h1>This is three</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita beatae numquam omnis temporibus deleniti sequi ducimus, iusto corporis laborum nesciunt illo non minima, nisi quod accusantium adipisci eaque voluptatum.
+            </p>
+        </div>
+    </section>
+    
+    <section class="third">
+        <div class="third-part">
+            <h1>This is Third Part</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate voluptatum pariatur debitis tenetur id aliquid iusto, nobis ipsum. Eos magni cumque at quam illum porro ex dolorum facere quis quod?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium porro accusamus cupiditate amet. Impedit sapiente iusto sequi eum. Quisquam non fuga praesentium iure dignissimos obcaecati deleniti dolorum in? Blanditiis, ad!
+            </p>
+        </div>
+    </section>
+    
+    <section class="four">
+        <img src="./Photos/julius.webp" class="four-img" alt="">
+        <div class="four-part">
+            <h1>Julius Caesar</h1>
+            <p>
+                Gaius Julius Caesar was a Roman general and statesman. A member of the First Triumvirate, Caesar led the Roman armies in the Gallic Wars before defeating his political rival Pompey in a civil war, and subsequently became dictator of Rome from 49 BC until his assassination in 44 BC
+            </p>
+        </div>
+    </section>
+
+    <section class="four five">
+        <img src="./Photos/alexander.jpg" class="four-img" alt="">
+        <div class="four-part five-part">
+            <h1>Alexander The Great</h1>
+            <p>
+                One of the most revered men around the world in the monarch fraternity, Alexander the Great ranks second in our list. He started at a young tender age barely into his teens after the death of his father and went on to conquer the whole of Greece by the age of 22. He then eyed the Asia minor and stretched his empire to the northern India all along. He died aged 33 battling fever which had deteriorated his health.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>

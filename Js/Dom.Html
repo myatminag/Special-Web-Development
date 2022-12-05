@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* img {
+            height: 100px;
+        } */
+
+    </style>
+</head>
+<body>
+
+    <!-- <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aut quod fuga quisquam vitae cum quis rerum expedita accusamus error voluptas, delectus veritatis culpa incidunt ad labore enim molestias doloribus.
+    </p>
+
+    <img src="../Css/Photos/wptest1.jpg" id="one" alt="">
+    <img src="../Css/Photos/wptest2.jpg" class="two" alt="">
+    <img src="../Css/Photos/wptest3.jpg" class="two" alt=""> -->
+
+    <!-- <button id="one" onclick="run()">click</button> -->
+
+    <p id="one">myat min aung</p>
+    <p id="two">mmaung</p>
+
+    <script>
+
+        //mouse
+        //keyboard
+        
+
+        // document.getElementById("one").onclick = function () {
+        //     alert("This is onclick property")
+        // };
+
+        // document.getElementById("one").addEventListener("click",function(){
+        //     alert("This is addEventListener")
+        // });
+
+        // let run = () => alert("This is onclick attr");
+
+
+        // document.querySelectorAll("img").forEach( function(el,index) {
+        //     el.src = `../Css/Photos/wptest${index+1}.jpg`;
+        // });
+
+        //method
+        // document.write("Hello");
+        //property
+        // document.body
+
+        //DOM Nodes
+        let body = document.body;
+        let p = document.createElement("p");//,<p></p>
+        let t = document.createTextNode("this is text");//this is text 
+        p.appendChild(t)
+
+        let two = document.getElementById("two")
+
+
+        body.append(p)
+        body.insertBefore(p,two)
+
+        // body.remove()
+
+    </script>
+    <!-- <p>this is text</p> -->
+
+</body>
+</html>

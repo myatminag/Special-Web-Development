@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input">
+    <br>
+    <ul id="list"></ul>
+
+    <script>
+
+        let input = document.getElementById('input');
+        let list = document.getElementById('list');
+    
+        let id = 1;
+
+        let k = Object.keys(localStorage);
+            k.sort();
+
+        if (localStorage.length > 0) {
+            id = Number(k[k.length-1]+1);
+        }
+
+        function save(x) {
+            localStorage.setItem(id,x);
+            id++;
+        };
+
+        function addToList(x,y) {
+            let li = document.createElement("li");
+            let text = document.createTextNode(" - "+x);
+            let btn = document.createElement("button")
+            let btnText = document.createTextNode("Delete");
+
+            btn.appendChild(btnText);
+
+            btn.setAttribute("onclick","del("+y+")");
+
+            li.appendChild(btn);
+
+            li.appendChild(text);
+
+            li.setAttribute("id","list-"+y);
+            
+            list.appendChild(li);
+
+            input.value = "";
+        };
+
+        function showList() {
+            console.log(k)
+            k.map(function (el) {
+                addToList(localStorage.getItem(el),el);
+            })
+            // for (let i = 1; i <= localStorage.length; i++) {
+            //     addToList(localStorage.getItem(i));
+            // }
+        };
+
+        function del(x) {
+            console.log(x);
+            localStorage.removeItem(x);
+            let current = document.getElementById("list-"+x);
+            current.remove();
+        };
+
+        document.addEventListener('keyup', function (e) {
+            if (e.keyCode == 13) {
+                let note = input.value;
+                addToList(note);
+                save(note);
+                console.log(note);
+            };
+        });
+
+        showList();
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        .title {
+            color: #6e3b3b;
+            margin: 30px auto;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 3em;
+        }
+
+        .gallery {
+            columns: 3 300px;
+            column-gap: 15px;
+            width: 1000px;
+            margin: auto;
+        }
+
+        .gallery-img{
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .gallery-img:hover {
+            filter: contrast(120%);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .gallery {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery {
+                columns: 2 150px;
+                column-gap: 7.5px;
+            }
+            .gallery-img {
+                margin-bottom: 7.5  px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="title"> <span style="color: #ff304f;">Rand's</span> Gallery</div>
+    <div class="gallery">
+        <img src="./Photos/wptest1.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest2.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest3.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest4.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest5.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest6.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest7.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest8.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest9.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest10.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest11.jpg" alt="" class="gallery-img">
+        <img src="./Photos/wptest12.jpg" alt="" class="gallery-img">
+    </div>
+    
+</body>
+</html>

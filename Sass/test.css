@@ -1,0 +1,17 @@
+.one {
+  border: 2px solid black;
+  margin: 2rem 1rem;
+  background-color: blue;
+  height: 100px;
+}
+
+.two h1 {
+  border: 2px solid black;
+  margin: 2rem 1rem;
+  color: blue;
+}
+
+.two p {
+  color: blue;
+}
+/*# sourceMappingURL=test.css.map */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .news {
+            width: 80%;
+            margin: 100px auto;
+            columns: 3 250px;
+        }
+
+        .card {
+            width: 100%;
+        }
+
+        .card-img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="news">
+        
+    </div>
+
+    <script>
+
+        fetch ('https://newsapi.org/v2/everything?q=tesla&from=2022-02-28&sortBy=publishedAt&apiKey=e0a893b99f8549a08d9a65479367b8e5')
+            .then (response => response.json())
+            .then (data => {
+                // console.log(data)
+                let article = data.articles
+                let news = document.getElementById(".news")
+                article.map(function (el,index) {
+                    console.log(el)
+                    news.innerHTML = `
+                    <div class="card">
+                        <img class="card-img" src="${el.urlToImage}" alt="">
+                        <h4 class="tilte">${el.title}</h4>
+                        <small class="author">${el.author}</small>
+                        <p class="description">${el.description}</p>
+                        <a href="${el.url}" class="read-more">Read More</a>
+                    </div>`;
+                })
+            })
+
+            .catch (function () {
+                console.log("error")
+            })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul name="" id="select">
+        <li value="mm">mm</li>
+        <li value="uk">uk</li>
+        <li value="us">us</li>
+    </ul>
+
+
+    <script src="Js/jquery.js"></script>
+
+    <script>
+
+        $("#select").append(`<li>kr</li>`)
+        $("#select").append(`<li>ger</li>`)
+
+        $("#select").prepend(`<li>thai</li>`)
+        $("#select").prepend(`<li>spain</li>`)
+
+
+        $("#select").before(`<p>this is before</p>`)
+        $("#select").after(`<p>this is after</p>`)
+
+        $("#select").empty()
+        $("#select").remove()
+
+    </script>
+    
+</body>
+</html>

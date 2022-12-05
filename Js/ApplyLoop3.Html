@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .news {
+            width: 80%;
+            margin: 100px auto;
+            columns: 3 250px;
+        }
+
+        .card {
+            width: 100%;
+        }
+
+        .card-img {
+            width: 100%;
+        }
+
+        /* .title {
+
+        }
+
+        .author {
+
+        }
+
+        .description {
+
+        }
+
+        .read-more {
+
+        } */
+
+    </style>
+</head>
+<body>
+
+    <div class="news">
+        <div class="card">
+            <img class="card-img" src="" alt="">
+            <h4 class="tilte"></h4>
+            <small class="author"></small>
+            <p class="description"></p>
+            <a href="" class="read-more"></a>
+        </div>
+    </div>
+
+    <script src="./API/News.js"></script>
+
+    <script>
+
+        console.log(data);
+        let article = data.articles;
+        let news = document.querySelector(".news");
+        article.map(function (el,index) {
+            console.log(el)
+            news.innerHTML += `
+            <div class="card">
+                <img class="card-img" src="${el.urlToImage}" alt="">
+                <h4 class="tilte">${el.title}</h4>
+                <small class="author">${el.author}</small>
+                <p class="description">${el.description}</p>
+                <a href="${el.url}" class="read-more">Read More</a>
+            </div>`;
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-md-6">
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                </button> -->
+
+                <!-- JQuery Button -->
+                <div class="m-5">
+                    <button class="btn btn-primary" id="show">Show Modal</button>
+                </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">My Title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias iusto veritatis sequi cum reprehenderit non, eveniet minima esse labore mollitia eius et reiciendis unde voluptatum veniam consectetur. Debitis, unde cumque?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+
+    $('#show').click(function () {
+        $('#exampleModal').modal('show');
+    });
+
+    </script>
+    
+</body>
+</html>

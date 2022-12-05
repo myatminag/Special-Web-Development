@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .obj {
+            width: 300px;
+            height: 100px;
+            background: grey;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button class="animate">Animate</button>
+    <button class="stop">Stop</button>
+
+    <div class="obj"></div>
+
+    <button class="chain">Chain</button>
+
+    <p class="obj-2">I am Rand</p>
+
+    <script src="Js/jquery.js"></script>
+
+    <script>
+
+        $(".animate").click(function () {
+            $(".obj").animate({
+                left : "+=50px",
+                top : "+=50px"
+            }, 3000, function () {
+                console.log("Animation is finished");
+            });
+        });
+
+        $(".stop").click(function () {
+            $(".obj").stop();
+        });
+
+        $(".chain").click(function () {
+            $(".obj-2").css("color","red").hide(2000).show(2000);
+        });
+
+    </script>
+    
+</body>
+</html>

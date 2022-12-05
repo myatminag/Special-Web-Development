@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .obj {
+            width: 300px;
+            height: 100px;
+            background: grey;
+            margin-top: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button class="hiddenBtn">Down</button>
+    <button class="showBtn">Up</button>
+    <button class="toggleBtn">Toggle</button>
+
+    <div class="obj"></div>
+
+    <script src="Js/jquery.js"></script>
+
+    <script>
+
+        $(".hiddenBtn").click(function () {
+            $(".obj").slideDown(3000, function () {
+                console.log("slideDown is finished");
+            });
+        });
+
+        $(".showBtn").click(function () {
+            $(".obj").slideUp(1000);
+        });
+
+        $(".toggleBtn").click(function () {
+            $(".obj").slideToggle(1000);
+        });
+
+    </script>
+    
+</body>
+</html>
